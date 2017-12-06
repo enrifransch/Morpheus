@@ -5,25 +5,22 @@ import { Routes, RouterModule } from '@angular/router';
 import {
   FullLayoutComponent,
   SimpleLayoutComponent
-} from './containers';
+} from './modules/core/containers';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  },
-  {
-    path: '',
     component: FullLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Inicio'
     },
     children: [
-      {
-        path: 'dashboard',
-        loadChildren: './views/dashboard/dashboard.module#DashboardModule'
-      }
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+      { path: 'dashboard', loadChildren: './modules/dashboard/dashboard.module#DashboardModule'},
+      { path: 'sabanas', loadChildren: './modules/sabanas/sabanas.module#SabanasModule' },
+      { path: 'targets', loadChildren: './modules/targets/targets.module#TargetsModule' },
+      { path: 'map', loadChildren: './modules/map/map.module#MapModule' },
+      { path: 'link_analysis', loadChildren: './modules/link-analysis/link-analysis.module#LinkAnalysisModule' }
     ]
   }
 ];

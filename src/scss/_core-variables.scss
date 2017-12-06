@@ -1,1 +1,44 @@
 // core overrides
+$navbar-bg : #34495e;
+$navbar-color:                        $gray-400 !default;
+$navbar-hover-color:                  $gray-300 !default;
+$navbar-active-color:                 $gray-300 !default;
+$navbar-border: (
+    bottom: (
+      size:                             1px,
+      style:                            solid,
+      color:                            darken($navbar-bg, 15%)
+    )
+  );
+  $navbar-brand-border: (
+    bottom: (
+      size:                             0.5px,
+      style:                            solid,
+      color:                            darken($navbar-bg, 15%)
+    )
+  );
+  $navbar-brand-bg:                     $navbar-bg;
+  $navbar-brand-logo:                   url('../img/logo.svg'); 
+  $navbar-brand-logo-size:              120px auto;
+  $navbar-brand-minimized-bg:           $navbar-brand-bg;
+  $navbar-brand-minimized-logo:         url('../img/logo-symbol.svg');
+  $navbar-brand-minimized-logo-size:    24px !default;
+
+  $sidebar-bg:                          darken($navbar-bg, 5%);
+
+  $aside-menu-bg:                       darken($navbar-bg, 5%);
+  $aside-menu-borders: (
+    left: (
+      size:                             1px,
+      style:                            solid,
+      color:                            darken($navbar-bg, 10%)
+    )
+  );
+
+  $breadcrumb-borders: (
+    bottom: (
+      size:                             1px,
+      style:                            solid,
+      color:                            darken($navbar-bg, 5%)
+    )
+  );
